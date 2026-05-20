@@ -1,0 +1,185 @@
+/* Worker specific styling overrides and utilities */
+
+.worker-panel-title {
+    color: #e0f2f1;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.worker-layout .sidebar {
+    background: #1b4d3e; /* Distinct dark green to separate from admin dark blue/black */
+}
+
+.worker-layout .sidebar-menu a:hover,
+.worker-layout .sidebar-menu a.active {
+    background-color: #2e7d32;
+    color: #fff;
+}
+
+/* Worker Dashboard Summary Cards */
+.summary-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    border-left: 5px solid #2e7d32;
+}
+
+.summary-icon {
+    background: #e8f5e9;
+    color: #2e7d32;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.summary-details h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.summary-details p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Task List Modernization */
+.task-list {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.task-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eaeaea;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: none !important; /* override old css */
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.task-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f1f8e9;
+    color: #558b2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.task-info h3 {
+    margin: 0;
+    color: #333 !important;
+    font-size: 1.2rem;
+}
+
+.task-info p {
+    margin: 5px 0 0;
+    color: #777 !important;
+    font-size: 0.9rem;
+}
+
+.task-actions {
+    margin-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Alerts */
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px dashed #ccc;
+    grid-column: 1 / -1;
+}
+
+.empty-state i {
+    font-size: 48px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .summary-card {
+        flex: 1 1 100%;
+    }
+}
